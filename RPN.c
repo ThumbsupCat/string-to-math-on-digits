@@ -188,4 +188,5 @@ int main() {
     printf("\n%d\n", eval(string));
     free(string);
     free(expression);
+    return 0;
 }
