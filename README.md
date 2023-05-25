@@ -173,7 +173,7 @@ Step 8:
     
     5
  
-Bibliography:
+# Bibliography:
 
     https://en.wikipedia.org/wiki/Shunting_yard_algorithm
     https://en.wikipedia.org/wiki/Reverse_Polish_notation
