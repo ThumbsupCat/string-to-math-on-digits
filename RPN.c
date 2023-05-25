@@ -42,12 +42,7 @@ char *string_convertor(Stack* rpn_stack) {
     int k = 0;
 
     while(!isStackEmpty(rpn_stack)) {
-        if (is_operator(top(rpn_stack)))
-            converted[k++] = pop(rpn_stack);
-        else if (is_digit(top(rpn_stack) + '0'))
-            converted[k++] = pop(rpn_stack) + '0';
-        else
-            converted[k++] = pop(rpn_stack);
+        converted[k++] = pop(rpn_stack);
     }
 
     destroyStack(rpn_stack);
@@ -77,7 +72,7 @@ char *RPN(char expression[]) {
 
     for (i = 0; expression[i]; i++) {
         if (is_digit(expression[i])) {
-            push(rpn, expression[i] - '0');
+            push(rpn, expression[i]);
         } else if (is_operator(expression[i])){
             while (!isStackEmpty(operators) && getPrecedence(top(operators)) >= getPrecedence(expression[i])) {
                 push(rpn, pop(operators));
