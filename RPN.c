@@ -37,7 +37,7 @@ char *reverse(char* string) {
     return string;
 }
 
-char *string_convertor(Stack* rpn_stack) {
+char* string_convertor(Stack* rpn_stack) {
     char *converted = calloc(rpn_stack->size + 1, sizeof(char));
     int k = 0;
 
@@ -67,8 +67,8 @@ int getPrecedence(char ch) {
 char *RPN(char expression[]) {
     int i;
 
-    Stack *rpn = createStack();
-    Stack *operators = createStack();
+    Stack* rpn = createStack();
+    Stack* operators = createStack();
 
     for (i = 0; expression[i]; i++) {
         if (is_digit(expression[i])) {
@@ -110,7 +110,7 @@ int eval(const char* expression) {
     int operand1, operand2;
     int result;
 
-    Stack *stack = createStack();
+    Stack* stack = createStack();
 
     for (i = 0; i < length; i++) {
         char ch = expression[i];
@@ -184,7 +184,8 @@ int main() {
     char *expression = malloc(100);
     scanf("%s", expression);
     char *string = RPN(expression);
-    printf("%d\n", eval(string));
+    printf("\n%s\n", string);
+    printf("\n%d\n", eval(string));
     free(string);
     free(expression);
 }
