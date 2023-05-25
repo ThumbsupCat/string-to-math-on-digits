@@ -6,6 +6,7 @@ Example:
 
   Input:
     (1+2)*3-4
+    
   Output:
     12+3*4-
 
@@ -16,18 +17,27 @@ From output to the final output, I'm going to explain each step:
 Step 1:
 
   1 is added to the stack
+  
 Step 2:
 
   2 is added to the stack
+  
 Step 3:
 
   Operator + found
+  
   Second operand is taken from the top of the stack top(stack) = 2
+  
   Popping the top of the stack
+  
   First operand is taken from the top for the stack top(stack) = 1
+  
   Popping the top of the stack
+  
   Goes into the switch and does the operation that the operator suggests
+  
     1 + 2 = 3
+    
   The result is pushed into the stack
   
   The remaining string looks like this
