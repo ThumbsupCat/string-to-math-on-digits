@@ -3,6 +3,7 @@
 This implementation is based on the shunting yard algorithm that produces a postfix notation from an infix notation(the way we are used to).
 
 Example:
+
   Input:
     (1+2)*3-4
   Output:
@@ -13,10 +14,13 @@ The output is used in order to compute the expression.
 From output to the final output, I'm going to explain each step:
 
 Step 1:
+
   1 is added to the stack
 Step 2:
+
   2 is added to the stack
 Step 3:
+
   Operator + found
   Second operand is taken from the top of the stack top(stack) = 2
   Popping the top of the stack
@@ -33,9 +37,11 @@ Step 3:
     3
     
 Step 4:
+
   3 is added to the stack
   
 Step 5:
+
   Operator * found
   Second operand is taken from the top of the stack top(stack) = 3
   Popping the top of the stack
@@ -55,6 +61,7 @@ Step 5:
     4 is added to the stack
     
  Step 7:
+ 
   Operator - found
   Second operand is taken from the top of the stack top(stack) = 9
   Popping the top of the stack
